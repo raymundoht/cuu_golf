@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Torneo del Pavo · CUU Golf × Campestre de Chihuahua</title>
+<meta name="description" content="Torneo del Pavo, 12 de diciembre. Modalidad A Go-Go de 4 jugadores en el Campestre de Chihuahua Golf & Country Club. Inscripción $3,500 MXN por persona.">
+<link rel="icon" href="logos-pagina/logo-web.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --lime:#e3bd5f;
+    --lime-deep:#b0842c;
+    --ink:#0f3322;
+    --ink-2:#174a31;
+    --muted:#6d6a5a;
+    --line:#ece3cc;
+    --paper:#fffdf8;
+    --soft:#f6efdd;
+    --green:#0f3322;
+    --red:#8e1b22;
+    --gold-grad:linear-gradient(135deg,#f3d98b 0%,#e3bd5f 45%,#b0842c 100%);
+    --radius:28px;
+    --wrap:1200px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Urbanist",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.5;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+  section{padding:96px 0}
+  h1,h2,h3{font-weight:600;letter-spacing:-.02em;line-height:1.05}
+  h2{font-size:clamp(2rem,4.2vw,3.2rem)}
+  .eyebrow{display:inline-block;font-size:.8rem;font-weight:600;color:var(--lime-deep);text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px}
+  .lead{color:var(--muted);font-size:1.08rem;max-width:56ch}
+  .center{text-align:center}
+  .center .lead{margin-inline:auto}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;gap:12px;border-radius:999px;font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;padding:8px 8px 8px 22px;transition:transform .2s ease, background .2s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .btn .arrow{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--lime);color:var(--ink);flex:none}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-lime{background:var(--lime);color:var(--ink)}
+  .btn-lime .arrow{background:var(--ink);color:var(--lime)}
+  .btn-ghost{border:1.5px solid rgba(255,255,255,.7);color:#fff;padding:14px 26px;backdrop-filter:blur(6px);background:rgba(255,255,255,.08)}
+  .pill{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:7px 16px;font-size:.85rem;font-weight:600}
+
+  /* HERO */
+  .hero-shell{padding:0}
+  .hero{position:relative;border-radius:0 0 40px 40px;overflow:hidden;min-height:min(860px,94vh);color:#fff;display:flex;flex-direction:column;
+    background:linear-gradient(180deg,rgba(6,28,17,.45) 0%,rgba(6,28,17,.05) 30%,rgba(6,28,17,.25) 60%,rgba(6,28,17,.85) 100%),url("img/hero-swing.jpg") center 35%/cover}
+  nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 28px}
+  nav .logo img{height:30px;width:auto}
+  .nav-links{display:flex;gap:30px;font-size:.92rem;font-weight:500}
+  .nav-links a{opacity:.9}
+  .nav-links a:hover{opacity:1;color:var(--lime)}
+  .hero-body{margin-top:auto;padding:0 44px 44px;display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:end}
+  .badge{display:inline-flex;align-items:center;gap:10px;background:rgba(227,189,95,.18);border:1px solid rgba(227,189,95,.55);color:var(--lime);border-radius:999px;padding:6px 14px 6px 6px;font-size:.82rem;font-weight:600;margin-bottom:22px;backdrop-filter:blur(6px)}
+  .badge b{background:var(--lime);color:var(--ink);border-radius:999px;padding:3px 10px}
+  .hero h1{font-size:clamp(3.2rem,9vw,7.2rem);font-weight:700;letter-spacing:-.04em;line-height:.92;text-transform:uppercase}
+  .hero h1 span{color:var(--lime)}
+  .hero p.sub{font-size:clamp(1.05rem,1.6vw,1.3rem);max-width:34ch;margin:20px 0 30px;opacity:.92}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .hero-card{background:rgba(6,28,17,.45);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:24px;padding:24px}
+  .hero-card .date{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid rgba(255,255,255,.18);padding-bottom:16px;margin-bottom:16px}
+  .hero-card .date strong{font-size:3.4rem;line-height:1;font-weight:700;color:var(--lime)}
+  .hero-card .date span{font-size:1.1rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+  .hero-card .date small{display:block;font-size:.8rem;opacity:.75;text-transform:none;letter-spacing:0;font-weight:500}
+  .hero-card ul{list-style:none;display:grid;gap:10px;font-size:.95rem}
+  .hero-card li{display:flex;justify-content:space-between;gap:16px}
+  .hero-card li span:first-child{opacity:.75}
+  .hero-card li strong{font-weight:700;text-align:right}
+  .hero-card .price{font-size:1.5rem;color:var(--lime)}
+
+  /* PRESENTACIÓN */
+  .intro-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:44px}
+  .tabs{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+  .tabs .pill{background:var(--soft);color:var(--muted);font-size:.78rem}
+  .tabs .pill.on{background:var(--lime);color:var(--ink)}
+  .intro-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:20px}
+  .photo-card{position:relative;border-radius:var(--radius);overflow:hidden;min-height:440px;background:#ccc center/cover;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:28px}
+  .photo-card::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(6,28,17,.82))}
+  .photo-card > *{position:relative}
+  .photo-card h3{font-size:1.9rem;margin-bottom:8px}
+  .photo-card p{opacity:.85;font-size:.95rem;max-width:38ch}
+  .intro-right{display:flex;flex-direction:column;gap:24px}
+  .intro-right .photo-card{min-height:250px}
+  .intro-text{font-size:1.3rem;line-height:1.45;font-weight:500}
+  .intro-text em{font-style:normal;color:var(--lime-deep);font-weight:700}
+
+  /* PREMIOS */
+  #premios{background:var(--soft);border-radius:0;margin:0}
+  .prize-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin-top:52px}
+  .prize{border-radius:var(--radius);padding:30px;display:flex;flex-direction:column;justify-content:space-between;min-height:250px;position:relative;overflow:hidden}
+  .prize .place{font-size:.85rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+  .prize .amount{font-size:clamp(2.4rem,4.6vw,4rem);font-weight:700;letter-spacing:-.03em;line-height:1}
+  .prize .amount small{font-size:.35em;font-weight:600;letter-spacing:0;margin-left:6px;opacity:.7}
+  .p1{grid-column:span 6;grid-row:span 2;background:var(--lime);min-height:520px}
+  .p1 .amount{font-size:clamp(3.4rem,7vw,6.2rem)}
+  .p1 .trophy{position:absolute;right:-30px;top:-30px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.35)}
+  .p1 .trophy::after{content:"1";position:absolute;inset:0;display:grid;place-items:center;font-size:9rem;font-weight:800;color:rgba(15,51,34,.12);padding:30px 30px 0 0}
+  .p2,.p3{grid-column:span 3;background:#fff;border:1px solid var(--line)}
+  .p2 .place,.p3 .place{color:var(--muted)}
+  .p2 .amount,.p3 .amount{font-size:clamp(2.2rem,3.6vw,3.4rem)}
+  .p2 .amount small,.p3 .amount small{display:block;margin:8px 0 0;font-size:.95rem}
+  .oyes{grid-column:span 6;color:#fff;background:linear-gradient(180deg,rgba(6,28,17,.55),rgba(6,28,17,.9)),url("img/pelota-hoyo.jpg") center/cover}
+  .oyes h3{font-size:1.6rem;margin:6px 0 4px}
+  .oyes p{opacity:.8;font-size:.95rem}
+  .oyes-list{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+  .oyes-list div{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:14px;backdrop-filter:blur(6px)}
+  .oyes-list span{display:block;font-size:.75rem;opacity:.75;text-transform:uppercase;letter-spacing:.08em}
+  .oyes-list strong{font-size:1.45rem;color:var(--lime)}
+  .note{margin-top:22px;font-size:.88rem;color:var(--muted);display:flex;gap:10px;align-items:flex-start;max-width:80ch}
+  .note::before{content:"i";flex:none;width:20px;height:20px;border-radius:50%;border:1.5px solid currentColor;display:grid;place-items:center;font-size:.72rem;font-weight:800;margin-top:1px}
+
+  /* FORMATO */
+  .format{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .format-img{border-radius:var(--radius);overflow:hidden;position:relative;min-height:600px;background:url("img/fairway.jpg") center/cover}
+  .format-img .float{position:absolute;left:20px;right:20px;bottom:20px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-radius:22px;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .format-img .float strong{font-size:1.1rem}
+  .format-img .float span{color:var(--muted);font-size:.88rem}
+  .rules{list-style:none;display:grid;gap:12px;margin:28px 0 40px}
+  .rules li{display:flex;gap:16px;align-items:center;padding:16px 18px;border:1px solid var(--line);border-radius:20px;font-weight:500}
+  .rules .n{flex:none;width:44px;height:44px;border-radius:14px;background:var(--lime);display:grid;place-items:center;font-weight:800}
+  .rules b{font-weight:700}
+  .tees h3{font-size:1.35rem;margin-bottom:6px}
+  .tees p{color:var(--muted);margin-bottom:18px}
+  .tee-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .tee{border-radius:20px;padding:18px;border:1px solid var(--line);display:flex;flex-direction:column;gap:12px}
+  .tee .dot{width:30px;height:30px;border-radius:50%;box-shadow:inset 0 -4px 0 rgba(0,0,0,.18)}
+  .tee .hcp{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+  .tee strong{font-size:1.15rem;line-height:1.1}
+  .tee.black .dot{background:#141414}
+  .tee.blue .dot{background:#2563c9}
+  .tee.white .dot{background:#fff;border:1.5px solid #cfd4cc}
+
+  /* REGLAMENTO */
+  #reglamento .wrap{max-width:980px}
+  .faq{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:44px}
+  details{background:var(--soft);border-radius:24px;padding:24px 26px;transition:background .2s}
+  details[open]{background:#fff;box-shadow:0 0 0 1px var(--line),0 18px 40px -24px rgba(0,0,0,.25)}
+  summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-weight:700;font-size:1.15rem}
+  summary::-webkit-details-marker{display:none}
+  summary .plus{flex:none;width:34px;height:34px;border-radius:10px;background:var(--lime);display:grid;place-items:center;font-size:1.3rem;font-weight:600;transition:transform .25s}
+  details[open] summary .plus{transform:rotate(45deg)}
+  details p{color:var(--muted);margin-top:14px;font-size:1rem}
+  details p b{color:var(--ink)}
+  .reg-tag{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:4px;font-weight:600}
+
+  /* RECAUDACIÓN */
+  .fund-head{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:start;margin-bottom:40px}
+  .fund-head .pill{background:transparent;border:1.5px solid var(--lime-deep);color:var(--green);margin-top:8px}
+  .fund-head h2{margin-bottom:14px}
+  .bar{display:flex;height:22px;border-radius:999px;overflow:hidden;margin-bottom:22px;gap:3px}
+  .bar span{display:block;height:100%}
+  .fund-grid{display:grid;grid-template-columns:2fr 2fr 1fr 1.4fr;gap:16px}
+  .fund{border-radius:var(--radius);padding:26px;min-height:230px;display:flex;flex-direction:column;justify-content:space-between;background:var(--soft)}
+  .fund .pct{font-size:clamp(3rem,5.5vw,4.6rem);font-weight:600;letter-spacing:-.04em;line-height:1}
+  .fund .lbl{font-weight:700;font-size:1.05rem}
+  .fund .lbl small{display:block;font-weight:500;color:var(--muted);font-size:.85rem;margin-top:4px}
+  .fund.caddies{background:var(--ink);color:#fff}
+  .fund.caddies .pct{color:var(--lime)}
+  .fund.caddies .lbl small{color:rgba(255,255,255,.65)}
+  .fund.bolsa{background:var(--lime)}
+  .fund.bolsa .lbl small{color:rgba(15,51,34,.65)}
+  .c1{background:var(--ink)} .c2{background:var(--lime)} .c3{background:var(--red)} .c4{background:#d9cdab}
+  .diff{margin-top:44px;text-align:center;font-size:clamp(1.4rem,3vw,2.1rem);font-weight:700;letter-spacing:-.02em}
+  .diff span{background:linear-gradient(transparent 60%,var(--lime) 60%)}
+
+  /* CIERRE */
+  .cta-shell{padding:0}
+  .cta{background:var(--ink);color:#fff;border-radius:40px 40px 0 0;overflow:hidden}
+  .cta-main{display:grid;grid-template-columns:1.2fr 1fr;gap:0}
+  .cta-copy{padding:72px 56px}
+  .cta-copy h2{font-size:clamp(2.2rem,5vw,4rem);text-transform:uppercase;font-weight:700;letter-spacing:-.03em;margin-bottom:20px}
+  .cta-copy h2 span{color:var(--lime)}
+  .cta-copy p{opacity:.78;max-width:46ch;font-size:1.08rem;margin-bottom:32px}
+  .cta-facts{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
+  .cta-facts .pill{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16)}
+  .cta-facts .pill b{color:var(--lime)}
+  .cta-copy small{display:block;margin-top:18px;opacity:.55;font-size:.85rem}
+  .cta-img{min-height:420px;background:linear-gradient(90deg,var(--ink) 0%,rgba(15,51,34,0) 30%),url("img/golfista-cielo.jpg") center 75%/cover}
+  .countdown{display:flex;gap:10px;margin-bottom:34px}
+  .countdown div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:10px 14px;min-width:74px;text-align:center}
+  .countdown strong{display:block;font-size:1.7rem;line-height:1.1;color:var(--lime);font-variant-numeric:tabular-nums}
+  .countdown span{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;opacity:.6}
+  footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 56px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  footer img{height:24px;width:auto}
+  footer .club{font-size:.95rem;line-height:1.3}
+  footer .club b{display:block}
+  footer .club span{opacity:.6}
+  footer .see{font-weight:700;color:var(--lime);font-size:1.05rem}
+
+  /* Reveal */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+  /* Responsive */
+  @media (max-width:980px){
+    .nav-links{display:none}
+    .hero-body{grid-template-columns:1fr;padding:0 24px 24px;gap:24px}
+    .intro-head,.intro-grid,.format,.cta-main,.fund-head{grid-template-columns:1fr}
+    .intro-head{gap:16px}
+    .format-img{min-height:420px}
+    .prize-grid{grid-template-columns:1fr 1fr}
+    .p1,.oyes{grid-column:span 2}
+    .p2,.p3{grid-column:span 1}
+    .p1{min-height:320px}
+    .fund-grid{grid-template-columns:1fr 1fr}
+    .faq{grid-template-columns:1fr}
+    .cta-img{min-height:280px;background:linear-gradient(0deg,var(--ink) 0%,rgba(15,51,34,0) 40%),url("img/golfista-cielo.jpg") center 78%/cover;order:-1;min-height:340px}
+    .cta-copy{padding:40px 28px 48px}
+    footer{padding:24px 28px}
+    .fund-head{gap:12px}
+  }
+  @media (max-width:600px){
+    section{padding:64px 0}
+    .wrap{padding:0 16px}
+    .hero-shell{padding:0}
+    .hero{border-radius:0 0 28px 28px}
+    nav{padding:16px 18px}
+    nav .logo img{height:22px}
+    nav .btn{font-size:.7rem;padding:6px 6px 6px 14px;gap:8px}
+    nav .btn .arrow{width:30px;height:30px}
+    .hero{min-height:auto;background-position:center,62% 30%}
+    .hero-body{padding:120px 18px 18px}
+    #premios{margin:0;border-radius:0}
+    .prize-grid{grid-template-columns:1fr}
+    .p1,.p2,.p3,.oyes{grid-column:span 1}
+    .prize{min-height:180px;padding:24px}
+    .oyes-list{grid-template-columns:1fr 1fr 1fr;gap:6px}
+    .oyes-list div{padding:10px}
+    .oyes-list strong{font-size:1.1rem}
+    .photo-card{min-height:360px}
+    .tee-row{grid-template-columns:1fr}
+    .tee{flex-direction:row;align-items:center}
+    .fund-grid{grid-template-columns:1fr 1fr}
+    .fund{min-height:170px;padding:20px}
+    .cta-shell{padding:0}
+    .cta{border-radius:28px 28px 0 0}
+    .countdown div{min-width:0;flex:1;padding:8px 6px}
+  }
+
+  /* Tema navideño: verde pino, dorado y rojo vino */
+  .hero h1 span,.cta-copy h2 span{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .badge b{background:var(--red);color:#fff}
+  .btn-lime{background:var(--gold-grad)}
+  .tabs .pill.on{background:var(--ink);color:var(--lime)}
+  .rules .n{background:var(--ink);color:var(--lime)}
+  summary .plus{background:var(--red);color:#fff}
+  .fund-head .pill{border-color:var(--red);color:var(--red)}
+  .diff span{background:linear-gradient(transparent 60%,rgba(227,189,95,.55) 60%)}
+  #premios{background:radial-gradient(120% 80% at 50% 0%,#1a4a31 0%,var(--ink) 60%);color:#fff}
+  #premios .eyebrow{color:var(--lime)}
+  #premios h2{color:#fff}
+  #premios .lead,#premios .note{color:rgba(255,255,255,.7)}
+  .p1{background:var(--gold-grad);color:var(--ink)}
+  .p1 .trophy{background:rgba(255,255,255,.25)}
+  .p1 .trophy::after{color:rgba(15,51,34,.14)}
+  .p2,.p3{background:rgba(255,255,255,.05);border:1px solid rgba(227,189,95,.35);color:#fff}
+  .p2 .place,.p3 .place{color:rgba(255,255,255,.65)}
+  .p2 .amount,.p3 .amount{color:var(--lime)}
+  .oyes{border:1px solid rgba(227,189,95,.35)}
+  .fund.bolsa{background:var(--gold-grad)}
+  .cta{background:radial-gradient(100% 120% at 0% 0%,#1a4a31 0%,var(--ink) 55%)}
+  .cta-img{background-blend-mode:normal}
+  footer{border-top-color:rgba(227,189,95,.25)}
+</style>
+</head>
+<body>
+
+<!-- 1. HERO -->
+<div class="hero-shell">
+  <header class="hero">
+    <nav>
+      <a href="#" class="logo" aria-label="CUU Golf"><img src="logos-pagina/logo-cuublanco.png" alt="CUU Golf"></a>
+      <div class="nav-links">
+        <a href="#premios">Premios</a>
+        <a href="#formato">Formato</a>
+        <a href="#reglamento">Reglamento</a>
+        <a href="#recaudacion">Recaudación</a>
+      </div>
+      <a href="https://wa.me/526142775603?text=Hola%2C%20quiero%20inscribirme%20al%20Torneo%20del%20Pavo%20%F0%9F%A6%83%E2%9B%B3" target="_blank" rel="noopener" class="btn btn-dark">Inscríbete <span class="arrow" aria-hidden="true">↗</span></a>
+    </nav>
+
+    <div class="hero-body">
+      <div>
+        <div class="badge"><b>12 dic</b> CUU Golf × Campestre de Chihuahua</div>
+        <h1>Torneo<br>del <span>Pavo</span></h1>
+        <p class="sub">¡Celebra la temporada navideña jugando golf y compitiendo por grandes premios!</p>
+        <div class="hero-ctas">
+          <a href="https://wa.me/526142775603?text=Hola%2C%20quiero%20inscribirme%20al%20Torneo%20del%20Pavo%20%F0%9F%A6%83%E2%9B%B3" target="_blank" rel="noopener" class="btn btn-lime">Inscribe a tu equipo <span class="arrow" aria-hidden="true">↗</span></a>
+          <a href="#premios" class="btn btn-ghost">Ver premios</a>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="Datos del torneo">
+        <div class="date"><strong>12</strong><span>de diciembre<small>Campestre de Chihuahua Golf &amp; Country Club</small></span></div>
+        <ul>
+          <li><span>Modalidad</span><strong>A Go-Go · 4 jugadores</strong></li>
+          <li><span>Hándicap mínimo acumulado</span><strong>60 por equipo</strong></li>
+          <li><span>Inscripción por persona</span><strong class="price">$3,500 MXN</strong></li>
+        </ul>
+      </aside>
+    </div>
+  </header>
+</div>
+
+<!-- PRESENTACIÓN -->
+<section id="evento">
+  <div class="wrap">
+    <div class="intro-head reveal">
+      <div>
+        <div class="tabs"><span class="pill on">Torneo del Pavo</span><span class="pill">CUU Golf</span><span class="pill">Campestre de Chihuahua</span></div>
+        <h2>Golf, competencia<br>y espíritu navideño</h2>
+      </div>
+      <p class="lead">Un torneo en modalidad A Go-Go de 4 jugadores para cerrar el año en el campo, con una gran bolsa de premios y una causa que vale la pena.</p>
+    </div>
+
+    <div class="intro-grid">
+      <div class="photo-card reveal" style="background-image:url('img/palo-pelota.jpg')">
+        <h3>Reúne a tu equipo</h3>
+        <p>Cuatro jugadores, un objetivo: llevar a tu equipo a los primeros lugares.</p>
+      </div>
+      <div class="intro-right">
+        <div class="photo-card reveal" style="background-image:url('img/green-aereo.jpg')"></div>
+        <p class="intro-text reveal">Compite por una bolsa de <em>$160,000 MXN</em> en premios por equipo, más <em>$16,000 MXN</em> en premios O'yeses a los mejores acercamientos.</p>
+        <div class="reveal"><a href="https://wa.me/526142775603?text=Hola%2C%20quiero%20inscribirme%20al%20Torneo%20del%20Pavo%20%F0%9F%A6%83%E2%9B%B3" target="_blank" rel="noopener" class="btn btn-dark">Inscribe a tu equipo <span class="arrow" aria-hidden="true">↗</span></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. PREMIOS -->
+<section id="premios">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Premios del torneo</span>
+      <h2>¡Compite por una gran<br>bolsa de premios!</h2>
+      <p class="lead" style="margin-top:16px">Demuestra tu talento en el campo y lleva a tu equipo a los primeros lugares.</p>
+    </div>
+
+    <div class="prize-grid">
+      <article class="prize p1 reveal">
+        <div class="trophy" aria-hidden="true"></div>
+        <span class="place">Premios por equipo · 1.er lugar</span>
+        <div class="amount">$80,000<small>MXN</small></div>
+      </article>
+      <article class="prize p2 reveal">
+        <span class="place">2.º lugar</span>
+        <div class="amount">$50,000<small>MXN</small></div>
+      </article>
+      <article class="prize p3 reveal">
+        <span class="place">3.er lugar</span>
+        <div class="amount">$30,000<small>MXN</small></div>
+      </article>
+      <article class="prize oyes reveal">
+        <div>
+          <span class="place" style="color:var(--lime)">Premios O'yeses</span>
+          <h3>Los mejores acercamientos</h3>
+          <p>También podrás competir por premios a los mejores acercamientos.</p>
+        </div>
+        <div class="oyes-list">
+          <div><span>1.er lugar</span><strong>$8,000</strong></div>
+          <div><span>2.º lugar</span><strong>$5,000</strong></div>
+          <div><span>3.er lugar</span><strong>$3,000</strong></div>
+        </div>
+      </article>
+    </div>
+    <p class="note">Premios calculados con base en una participación de 160 jugadores inscritos. Los montos finales se ajustarán a la recaudación efectiva.</p>
+  </div>
+</section>
+
+<!-- 3. FORMATO -->
+<section id="formato">
+  <div class="wrap format">
+    <div class="format-img reveal">
+      <div class="float"><div><strong>Modalidad A Go-Go</strong><br><span>Equipos de 4 jugadores</span></div><span class="pill" style="background:var(--lime);color:var(--ink)">HCP mín. 60</span></div>
+    </div>
+    <div>
+      <div class="reveal">
+        <span class="eyebrow">Formato del torneo</span>
+        <h2>Modalidad A Go-Go</h2>
+      </div>
+      <ul class="rules reveal">
+        <li><span class="n">4</span><span>Equipos conformados por <b>4 jugadores</b>.</span></li>
+        <li><span class="n">60</span><span>Hándicap mínimo acumulado de <b>60 por equipo</b>.</span></li>
+        <li><span class="n">$</span><span>Inscripción individual de <b>$3,500 MXN</b> por participante.</span></li>
+      </ul>
+      <div class="tees reveal">
+        <h3>Marcas de salida</h3>
+        <p>Las marcas se asignarán de acuerdo con el hándicap de cada jugador:</p>
+        <div class="tee-row">
+          <div class="tee black"><span class="dot"></span><div><span class="hcp">HCP 0–6</span><br><strong>Marcas negras</strong></div></div>
+          <div class="tee blue"><span class="dot"></span><div><span class="hcp">HCP 7–15</span><br><strong>Marcas azules</strong></div></div>
+          <div class="tee white"><span class="dot"></span><div><span class="hcp">HCP 16–36</span><br><strong>Marcas blancas</strong></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. BASES Y REGLAMENTO -->
+<section id="reglamento" style="padding-top:0">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Bases y reglamento</span>
+      <h2>Reglas claras para todos</h2>
+    </div>
+    <div class="faq">
+      <details open class="reveal">
+        <summary><span><span class="reg-tag">01</span>Validación de hándicaps</span><span class="plus" aria-hidden="true">+</span></summary>
+        <p>Todos los equipos estarán sujetos a revisión y aprobación de sus hándicaps por parte del <b>comité organizador</b>.</p>
+      </details>
+      <details open class="reveal">
+        <summary><span><span class="reg-tag">02</span>Desempates</span><span class="plus" aria-hidden="true">+</span></summary>
+        <p>En caso de empate, se realizará un <b>O'yes en el hoyo 10</b>. El ganador será el tiro que quede a menor distancia del hoyo.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 5. RECAUDACIÓN -->
+<section id="recaudacion" style="padding-top:0">
+  <div class="wrap">
+    <div class="fund-head reveal">
+      <span class="pill">Recaudación y beneficios</span>
+      <div>
+        <h2>Juega, compite y comparte</h2>
+        <p class="lead">Tu participación también contribuye a reconocer el esfuerzo de quienes hacen posible cada jornada de golf. La recaudación total por concepto de inscripciones se distribuirá de la siguiente manera:</p>
+      </div>
+    </div>
+
+    <div class="bar reveal" role="img" aria-label="40% aguinaldo para caddies, 40% bolsa de premios, 5% rifas, 15% organización">
+      <span class="c1" style="width:40%"></span><span class="c2" style="width:40%"></span><span class="c3" style="width:5%"></span><span class="c4" style="width:15%"></span>
+    </div>
+
+    <div class="fund-grid">
+      <div class="fund caddies reveal"><div class="pct">40%</div><div class="lbl">Aguinaldo para caddies<small>Para quienes nos acompañan en cada ronda.</small></div></div>
+      <div class="fund bolsa reveal"><div class="pct">40%</div><div class="lbl">Bolsa de premios<small>Para los equipos y los O'yeses.</small></div></div>
+      <div class="fund reveal"><div class="pct" style="color:var(--red)">5%</div><div class="lbl">Rifas</div></div>
+      <div class="fund reveal"><div class="pct">15%</div><div class="lbl">Organización</div></div>
+    </div>
+
+    <p class="diff reveal"><span>¡Tu participación hace la diferencia!</span></p>
+  </div>
+</section>
+
+<!-- 6. CIERRE – INSCRIPCIONES -->
+<div class="cta-shell" id="inscripcion">
+  <div class="cta">
+    <div class="cta-main">
+      <div class="cta-copy">
+        <span class="eyebrow" style="color:var(--lime)">Inscripciones abiertas</span>
+        <h2>¡No te quedes fuera del Torneo del <span>Pavo</span>!</h2>
+        <p>Reúne a tu equipo, prepara tus palos y disfruta de una jornada llena de competencia, convivencia y espíritu navideño.</p>
+        <div class="cta-facts">
+          <span class="pill"><b>12 de diciembre</b></span>
+          <span class="pill">Inscripción: <b>$3,500 MXN</b> por persona</span>
+        </div>
+        <div class="countdown" id="countdown" aria-label="Cuenta regresiva al torneo">
+          <div><strong data-d>--</strong><span>Días</span></div>
+          <div><strong data-h>--</strong><span>Horas</span></div>
+          <div><strong data-m>--</strong><span>Min</span></div>
+        </div>
+        <a href="https://wa.me/526142775603?text=Hola%2C%20quiero%20inscribirme%20al%20Torneo%20del%20Pavo%20%F0%9F%A6%83%E2%9B%B3" target="_blank" rel="noopener" class="btn btn-lime">Inscribirme ahora <span class="arrow" aria-hidden="true">↗</span></a>
+        <small>Cupo y premios calculados sobre una participación de 160 jugadores.</small>
+      </div>
+      <div class="cta-img" role="img" aria-label="Golfista en el campo"></div>
+    </div>
+    <footer>
+      <img src="logos-pagina/logo-cuublanco.png" alt="CUU Golf">
+      <div class="club"><b>Campestre de Chihuahua</b><span>Golf &amp; Country Club</span></div>
+      <div class="see">¡Nos vemos en el campo!</div>
+    </footer>
+  </div>
+</div>
+
+<script>
+  // Reveal on scroll
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Cuenta regresiva al 12 de diciembre (7:00 a.m. hora de Chihuahua)
+  (function () {
+    const now = new Date();
+    let y = now.getFullYear();
+    let target = new Date(`${y}-12-12T07:00:00-06:00`);
+    if (now > new Date(`${y}-12-13T00:00:00-06:00`)) target = new Date(`${y + 1}-12-12T07:00:00-06:00`);
+    const box = document.getElementById('countdown');
+    const pad = n => String(n).padStart(2, '0');
+    function tick() {
+      const diff = Math.max(0, target - new Date());
+      box.querySelector('[data-d]').textContent = Math.floor(diff / 864e5);
+      box.querySelector('[data-h]').textContent = pad(Math.floor(diff / 36e5) % 24);
+      box.querySelector('[data-m]').textContent = pad(Math.floor(diff / 6e4) % 60);
+    }
+    tick(); setInterval(tick, 30000);
+  })();
+</script>
+</body>
+</html>
