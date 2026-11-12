@@ -14,9 +14,11 @@
     --green:#0e3a25;
     --green-2:#14472e;
     --green-3:#2c6b47;
-    --gold:#e6bf5c;
-    --gold-2:#c99a35;
-    --gold-soft:#f1dca4;
+    --red:#9c1c24;
+    --red-deep:#751319;
+    --gold:#d4af37;
+    --gold-2:#b38c22;
+    --gold-soft:#ecd992;
     --cream:#f8f3e7;
     --cream-2:#efe6d0;
     --ink:#0e3a25;
@@ -75,7 +77,7 @@
   .dark{background:var(--green);color:#fff}
   .premios{padding:96px 0 72px;background:radial-gradient(90% 120% at 15% 10%,#164a30 0%,var(--green) 60%)}
   .prize-top{display:grid;grid-template-columns:1fr 1fr;gap:0}
-  .prize-total{padding-right:56px;border-right:1px solid rgba(230,191,92,.5)}
+  .prize-total{padding-right:56px;border-right:1px solid rgba(212,175,55,.45)}
   .prize-total h2{font-size:clamp(2.2rem,4.2vw,3.4rem)}
   .rule{width:72px;height:3px;background:var(--gold);margin:30px 0 26px}
   .big{font-size:clamp(4rem,9.5vw,8rem);font-weight:900;color:var(--gold);letter-spacing:-.05em;line-height:.9}
@@ -88,7 +90,7 @@
   .place.first{grid-column:2;align-self:end}
   .place.first strong{font-size:clamp(2.4rem,4.4vw,3.6rem)}
   .place.rest{grid-column:1/-1}
-  .oyes{margin-top:44px;border-top:1px solid rgba(230,191,92,.5);padding-top:26px;display:flex;justify-content:center;align-items:center;gap:28px;flex-wrap:wrap;font-size:1.25rem;font-weight:500}
+  .oyes{margin-top:44px;border-top:1px solid rgba(212,175,55,.45);padding-top:26px;display:flex;justify-content:center;align-items:center;gap:28px;flex-wrap:wrap;font-size:1.25rem;font-weight:500}
   .oyes b{font-weight:800}
   .oyes .sep{width:1px;height:26px;background:rgba(255,255,255,.4)}
   .note{text-align:center;margin-top:18px;font-size:.82rem;opacity:.6}
@@ -121,14 +123,14 @@
   .fondo h2{text-align:center;font-size:clamp(1.9rem,3.8vw,3rem);margin-bottom:48px}
   .fund-grid{display:grid;grid-template-columns:repeat(4,1fr)}
   .fund{padding:0 32px}
-  .fund + .fund{border-left:1px solid rgba(230,191,92,.5)}
+  .fund + .fund{border-left:1px solid rgba(212,175,55,.45)}
   .fund strong{display:block;font-size:clamp(2.8rem,5.4vw,4.4rem);font-weight:800;color:var(--gold);letter-spacing:-.04em;line-height:1}
   .fund span{display:block;font-size:1.1rem;line-height:1.2;margin-top:6px}
   .bar{display:flex;margin-top:44px;border-radius:6px;overflow:hidden;height:46px;font-weight:800;font-size:1rem}
   .bar span{display:grid;place-items:center}
   .b1{width:40%;background:var(--green-3);color:#fff}
   .b2{width:40%;background:var(--gold);color:var(--green)}
-  .b3{width:5%;background:var(--gold-soft);color:var(--green)}
+  .b3{width:5%;background:var(--red);color:#fff}
   .b4{width:15%;background:var(--cream-2);color:var(--green)}
   .fondo p{text-align:center;opacity:.7;max-width:62ch;margin:28px auto 0;font-size:.95rem}
 
@@ -160,7 +162,7 @@
     .stat:nth-child(even){border-left:1px solid rgba(255,255,255,.22);padding-left:20px}
     .intro .wrap,.prize-top,.formato .wrap{grid-template-columns:1fr}
     .intro .wrap{gap:28px}
-    .prize-total{padding:0 0 40px;border-right:0;border-bottom:1px solid rgba(230,191,92,.5);margin-bottom:24px}
+    .prize-total{padding:0 0 40px;border-right:0;border-bottom:1px solid rgba(212,175,55,.45);margin-bottom:24px}
     .places{padding-left:0}
     .formato-left{padding-right:0;border-right:0}
     .equipo-img{margin:32px -32px 0;min-height:300px;-webkit-mask-image:linear-gradient(180deg,#000 60%,transparent 100%);mask-image:linear-gradient(180deg,#000 60%,transparent 100%)}
@@ -322,7 +324,7 @@
     <div class="fund-grid">
       <div class="fund"><strong>40%</strong><span>Aguinaldo<br>para caddies</span></div>
       <div class="fund"><strong>40%</strong><span>Bolsa<br>de premios</span></div>
-      <div class="fund"><strong>5%</strong><span>Rifas</span></div>
+      <div class="fund"><strong style="color:var(--red)">5%</strong><span>Rifas</span></div>
       <div class="fund"><strong>15%</strong><span>Organización</span></div>
     </div>
     <div class="bar" role="img" aria-label="40% aguinaldo para caddies, 40% bolsa de premios, 5% rifas, 15% organización">
