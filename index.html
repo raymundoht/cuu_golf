@@ -114,9 +114,12 @@
   details[open] summary::after{transform:rotate(45deg)}
   details p{padding:0 12px 18px;color:var(--muted)}
   details p b{color:var(--ink)}
-  .tees{display:flex;flex-wrap:wrap;gap:8px 18px;padding:0 12px 18px;color:var(--muted);font-size:.95rem}
-  .tees span{display:inline-flex;align-items:center;gap:8px}
-  .tees i{width:12px;height:12px;border-radius:50%;display:inline-block}
+  .tees{display:grid;gap:8px;padding:0 12px 12px;color:var(--muted);font-size:.95rem}
+  .tees span{display:inline-flex;align-items:center;gap:10px}
+  .tees b{color:var(--ink)}
+  .tees i{width:12px;height:12px;border-radius:50%;display:inline-block;flex:none}
+  .tees-note{padding:0 12px 18px;color:var(--muted);font-size:.88rem;line-height:1.45}
+  .tees-note b{color:var(--ink)}
 
   /* RECAUDACIÓN */
   .fondo{padding:80px 0 88px}
@@ -270,11 +273,11 @@
       </div>
     </div>
     <div class="oyes reveal">
-      <span><b>O'yeses: <span class="gold">$16,000</span> MXN</b></span>
+      <span><b>Oyeses: <span class="gold">$16,000</span> MXN</b></span>
       <span class="sep"></span>
-      <span>$8,000 / $5,000 / $3,000</span>
+      <span>1ro $8,000 · 2do $5,000 · 3ro $3,000</span>
     </div>
-    <p class="note">Premios por equipo en MXN, calculados con base en 160 jugadores inscritos. Los montos finales se ajustarán a la recaudación efectiva.</p>
+    <p class="note">Los premios anunciados están calculados con base en 160 jugadores inscritos. Los montos finales se ajustarán a lo efectivamente recaudado, respetando los porcentajes indicados.</p>
   </div>
 </section>
 
@@ -290,27 +293,37 @@
         <h3>Modalidad A Go-Go</h3>
         <ul class="list">
           <li><svg class="ic"><use href="#i-team"/></svg>Equipos de 4 jugadores</li>
-          <li><svg class="ic"><use href="#i-trophy"/></svg>Hándicap mínimo acumulado de 60 por equipo</li>
-          <li><svg class="ic"><use href="#i-coins"/></svg>$3,500 MXN por participante</li>
+          <li><svg class="ic"><use href="#i-trophy"/></svg>Mínimo de 60 de HCP ÍNDICE sumado por equipo</li>
+          <li><svg class="ic"><use href="#i-coins"/></svg>$3,500 MXN por persona</li>
         </ul>
       </div>
       <div class="reveal" id="reglamento">
-        <h3>Reglamento</h3>
+        <h3>Bases y Convocatoria</h3>
+        <details open>
+          <summary>Marcas de salida</summary>
+          <div class="tees">
+            <span><i style="background:#141414"></i><b>HCP ÍNDICE 0–4</b> · Negras</span>
+            <span><i style="background:#2563c9"></i><b>HCP ÍNDICE 4.1–6.4</b> · Azules</span>
+            <span><i style="background:#fff;border:1px solid #bbb"></i><b>HCP ÍNDICE 6.5 en adelante (varones)</b> · Blancas</span>
+            <span><i style="background:var(--red)"></i><b>Damas</b> · Rojas</span>
+            <span><i style="background:var(--gold)"></i><b>Seniors (70 años en adelante)</b> · Amarillas</span>
+          </div>
+          <div class="tees-note">
+            • Damas con HCP ÍNDICE de 4.1 o menos: <b>marcas azules</b>.<br>
+            • Máximo <b>2 seniors</b> de marcas amarillas por equipo.
+          </div>
+        </details>
         <details>
-          <summary>Validación de hándicap</summary>
-          <p>Todos los equipos estarán sujetos a revisión y aprobación de sus hándicaps por parte del <b>comité organizador</b>.</p>
+          <summary>Validación de HCP ÍNDICE</summary>
+          <p>Los equipos están sujetos a la revisión y aprobación de su <b>HCP ÍNDICE por parte del comité</b>.</p>
         </details>
         <details>
           <summary>Desempate</summary>
-          <p>En caso de empate, se realizará un <b>O'yes en el hoyo 10</b>. Gana el tiro que quede a menor distancia del hoyo.</p>
+          <p>Los empates se definirán a un <b>O'yes en el hoyo 10</b>. Ganará el tiro que quede más cerca del hoyo.</p>
         </details>
         <details>
-          <summary>Marcas de salida</summary>
-          <div class="tees">
-            <span><i style="background:#141414"></i>HCP 0–6 · negras</span>
-            <span><i style="background:#2563c9"></i>HCP 7–15 · azules</span>
-            <span><i style="background:#fff;border:1px solid #bbb"></i>HCP 16–36 · blancas</span>
-          </div>
+          <summary>Disposiciones generales</summary>
+          <p>Toda situación no prevista en la presente convocatoria será sometida a la consideración y resolución del <b>Comité Organizador</b>.</p>
         </details>
       </div>
     </div>
@@ -320,17 +333,17 @@
 <!-- RECAUDACIÓN -->
 <section class="fondo dark" id="recaudacion">
   <div class="wrap reveal">
-    <h2>Tu participación hace la diferencia.</h2>
+    <h2>Juega y apoya el aguinaldo de nuestros caddys.</h2>
     <div class="fund-grid">
-      <div class="fund"><strong>40%</strong><span>Aguinaldo<br>para caddies</span></div>
+      <div class="fund"><strong>40%</strong><span>Aguinaldo<br>caddys</span></div>
       <div class="fund"><strong>40%</strong><span>Bolsa<br>de premios</span></div>
       <div class="fund"><strong style="color:var(--red)">5%</strong><span>Rifas</span></div>
       <div class="fund"><strong>15%</strong><span>Organización</span></div>
     </div>
-    <div class="bar" role="img" aria-label="40% aguinaldo para caddies, 40% bolsa de premios, 5% rifas, 15% organización">
+    <div class="bar" role="img" aria-label="40% aguinaldo caddys, 40% bolsa de premios, 5% rifas, 15% organización">
       <span class="b1">40%</span><span class="b2">40%</span><span class="b3">5%</span><span class="b4">15%</span>
     </div>
-    <p>La recaudación total por inscripciones se reparte así, para reconocer a quienes hacen posible cada jornada de golf.</p>
+    <p>La recaudación total por inscripciones se distribuirá así, reconociendo a quienes hacen posible cada jornada de golf.</p>
   </div>
 </section>
 
